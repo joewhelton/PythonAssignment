@@ -3,6 +3,7 @@ from Functions.commonFunctions import *
 from Classes.Users import Users
 from Classes.Modules import Modules
 
+
 def main():
     users = Users("Login_data.txt")
     users.load_data()
@@ -15,5 +16,6 @@ def main():
 
     main_menu(modules)
     exit()
+
 
 main()

@@ -21,7 +21,7 @@ def main_menu(modules):
         choice = input(">")
 
         if choice == "1":
-            record_attendance(modules)
+            record_attendance_menu(modules)
         elif choice == "2":
             generate_statistics(modules)
         elif choice == "3":
@@ -30,8 +30,45 @@ def main_menu(modules):
             print("Invalid choice")
 
 
-def record_attendance(modules):
-    return 0
+def record_attendance_menu(modules):
+    choice = -1
+    loop = True
+    while loop:
+        menu_heading("Module Record System(Attendance) - Choose a Module")
+        for i, mod in enumerate(modules.module):
+            print(f"{i+1} - {mod.code} {mod.title}")
+        print("x - Back to Main Menu")
+        choice = input(">")
+
+        if choice.lower() == "x":
+            return
+        try:
+            module = modules.module[int(choice)-1]
+            record_attendance(module)
+        except:
+            print("Invalid choice")
+
+
+def record_attendance(module):
+    choice = -1
+    menu_heading(f"Module Record System(Attendance) {module.code}")
+    print(f"There are {len(module.students)} students enrolled")
+    for i, student in enumerate(module.students):
+        print(f"Student #{i+1}: {student.name}")
+        print("1. Present")
+        print("2. Absent")
+        print("3. Excused")
+        choice = input(">")
+
+        if choice == "1":
+            student.present += 1
+        if choice == "2":
+            student.absent += 1
+        if choice == "3":
+            student.excused += 1
+
+    module.save_data()
+    print(f"{module.code}.txt updated with latest attendance records")
 
 
 def generate_statistics(modules):

@@ -32,3 +32,10 @@ class Module:
                 break
             data = line.split(",")
             self.students.append(Student(data[0], int(data[1]), int(data[2]), int(data[3])))
+        connection.close()
+
+    def save_data(self):
+        connection = open(DATA_PATH + self.code + ".txt", "w")
+        for student in self.students:
+            connection.write(f"{student.name},{student.present},{student.absent},{student.excused}\n")
+        connection.close()
