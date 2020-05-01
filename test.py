@@ -1,4 +1,4 @@
-#Stuff for tsting functionality as I go, not formal unit testing
+# Stuff for testing functionality as I go, not formal unit testing
 
 from config import *
 from Classes.Modules import Modules
