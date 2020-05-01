@@ -8,4 +8,3 @@ class Student:
         self.absent = absent
         self.excused = excused
 
-
