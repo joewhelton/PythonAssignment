@@ -8,4 +8,5 @@ def main():
     modules.load_data()
     print(f"{modules.module[0].code} - {modules.module[0].title}")
 
+    print(f"{modules.module[1].students[0].name}")
 main()
