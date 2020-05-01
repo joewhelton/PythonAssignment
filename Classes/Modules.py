@@ -4,11 +4,11 @@ from Classes.Students import Student
 
 class Modules:
     def __init__(self, data_file):
-        self.dataFile = data_file
+        self.data_file = data_file
         self.module = []
 
     def load_data(self):
-        connection = open(DATA_PATH + self.dataFile)
+        connection = open(DATA_PATH + self.data_file)
         while True:
             line = connection.readline()
             if line == "":
