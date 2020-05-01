@@ -2,7 +2,7 @@ Module: SOFT_6017  Modular Programming
 
 Number of students: 3
 Number of classes: 11
-Average attendance: 1.55
+Average attendance: 5.7
 Low Attender(s): under 70.0 %
 	Alan Wilson
 	Alan Lowe
