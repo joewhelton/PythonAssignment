@@ -14,7 +14,7 @@ class Modules:
             if line == "":
                 break
             data = line.split(",")
-            self.module.append(Module(data[0], data[1]))
+            self.module.append(Module(data[0], data[1].rstrip()))
 
 
 class Module:
@@ -25,7 +25,7 @@ class Module:
         self.load_data()
 
     def load_data(self):
-        connection = open(DATA_PATH + self.code + ".txt")
+        connection = open(f"{DATA_PATH}{self.code}.txt")
         while True:
             line = connection.readline()
             if line == "":
@@ -35,7 +35,7 @@ class Module:
         connection.close()
 
     def save_data(self):
-        connection = open(DATA_PATH + self.code + ".txt", "w")
+        connection = open(f"{DATA_PATH}{self.code}.txt", "w")
         for student in self.students:
             connection.write(f"{student.name},{student.present},{student.absent},{student.excused}\n")
         connection.close()

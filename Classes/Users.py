@@ -8,7 +8,7 @@ class Users:
         self.logged_in_user = ""
 
     def load_data(self):
-        connection = open(DATA_PATH + self.data_file)
+        connection = open(f"{DATA_PATH}{self.data_file}")
         while True:
             line = connection.readline().rstrip()
             if line == "":

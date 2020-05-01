@@ -1,0 +1,6 @@
+Nathan Explosion,3,5,0
+Skwisgaar Skwigelf,6,2,0
+Toki Wartooth,8,0,0
+Pickles Drummer,5,1,2
+William Murderface,0,8,0
+Joe Whelton,2,0,6

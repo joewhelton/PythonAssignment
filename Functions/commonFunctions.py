@@ -3,9 +3,9 @@ from Functions.attendance import record_attendance
 from Functions.statistics import generate_statistics
 
 def menu_heading(heading_text):
-    print(heading_text)
+    print(f"\n{heading_text}")
     print("-" * len(heading_text))
-    print("\n")
+    print()
 
 
 def login(users):
@@ -55,15 +55,3 @@ def submenu(modules, heading):
             return module
         except:
             print("Invalid choice")
-
-
-
-
-
-
-def write_tabbed_list(list, connection):
-    if len(list) == 0 :
-        connection.write("\tNONE\n")
-    else:
-        for x in range(len(list)):
-            connection.write(f"\t{list[x]}\n")

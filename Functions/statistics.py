@@ -1,6 +1,5 @@
 import datetime
 from config import *
-from Functions.commonFunctions import write_tabbed_list
 
 
 def generate_statistics(module):
@@ -34,9 +33,17 @@ def generate_statistics(module):
     connection.write("Non Attender(s):\n")
     write_tabbed_list(non_attendance, connection)
     connection.write("Best Attender(s):\n")
-    connection.write(f"\tAttended{top_attendance}/{number_of_classes} days\n")
+    connection.write(f"\tAttended {top_attendance}/{number_of_classes} days\n")
     write_tabbed_list(best_attendance, connection)
-
     connection.close()
-    connection = open(filename)
+
+    connection = open(filename)     #Also acts as confirmation file saved correctly
     print(connection.read())
+
+
+def write_tabbed_list(list, connection):
+    if len(list) == 0 :
+        connection.write("\tNONE\n")
+    else:
+        for x in range(len(list)):
+            connection.write(f"\t{list[x]}\n")

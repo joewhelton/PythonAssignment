@@ -1,9 +1,6 @@
-from Functions.commonFunctions import menu_heading
-
-
 def record_attendance(module):
     choice = -1
-    menu_heading(f"Module Record System(Attendance) {module.code}")
+    print(f"Module Record System(Attendance) {module.code}")
     print(f"There are {len(module.students)} students enrolled")
     for i, student in enumerate(module.students):
         print(f"Student #{i+1}: {student.name}")
