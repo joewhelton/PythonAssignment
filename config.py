@@ -1,2 +1,2 @@
-DATA_PATH = ".\\Data"
+DATA_PATH = ".\\Data\\"
 
