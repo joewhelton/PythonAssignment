@@ -10,6 +10,9 @@ def main():
 
     print(f"{modules.module[1].students[0].name}")
 
+    modules.module[1].students[0].absent = 1
+    modules.module[1].save_data()
+
     users = Users("Login_data.txt")
     users.load_data()
     print(f"{users.user[0].username}")
