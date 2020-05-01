@@ -1,9 +1,11 @@
 from config import *
 
+def login():
+    print()
 
 
 def main():
-    print()
+    login()
 
 
 main()
